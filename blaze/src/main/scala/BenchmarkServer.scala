@@ -13,6 +13,10 @@ object BenchmarkServer extends Server {
       respond.json(Map("message" -> "Hello, World!"))
     }
 
+    get("/throw") { request =>
+      throw new RuntimeException("Well, shit...")
+    }
+
   })
 
 }
